@@ -1,0 +1,349 @@
+{
+  "TemplateName": "BirthCertificate",
+  "Locale": "en-US",
+  "Pages": [
+    {
+      "PageName": "BirthCertificate",
+      "TemplateImage": "BirthCertificate.jpg",
+      "Extractors": "SURF(features=700), SIFT(features=700), AKAZE(features=700)",
+      "Fields": [
+        {
+          "FieldName": "CNSeries",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 307,
+            "y": 180,
+            "width": 59,
+            "height": 20
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "BirthCertificateNumber",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 387,
+            "y": 178,
+            "width": 153,
+            "height": 21
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "CNP",
+          "FieldType": "TextField",
+          "DataType": "cnp",
+          "BoundingBox": {
+            "x": 454,
+            "y": 225,
+            "width": 276,
+            "height": 49
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "LastName",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 205,
+            "y": 290,
+            "width": 525,
+            "height": 37
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "FirstName",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 205,
+            "y": 328,
+            "width": 526,
+            "height": 34
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "FullName",
+          "FieldValue": "{{FirstName}} {{LastName}}",
+          "FieldType": "ComputedField",
+          "DataType": "text",
+          "OnCompute": "computeFullName",
+          "Mappings": {
+          }
+        },
+        {
+          "FieldName": "Sex",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 105,
+            "y": 363,
+            "width": 97,
+            "height": 35
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "BirthYear",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 397,
+            "y": 379,
+            "width": 114,
+            "height": 19
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "BirthMonth",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 512,
+            "y": 379,
+            "width": 126,
+            "height": 20
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "BirthDay",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 640,
+            "y": 380,
+            "width": 90,
+            "height": 18
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "Place",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 205,
+            "y": 414,
+            "width": 306,
+            "height": 31
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "PlaceLabel",
+          "FieldValue": "Localitate/Localite/Place",
+          "FieldType": "Label",
+          "BoundingBox": {
+            "x": 203,
+            "y": 399,
+            "width": 308,
+            "height": 14
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "County",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 513,
+            "y": 415,
+            "width": 217,
+            "height": 30
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "CountyLabel",
+          "FieldValue": "Judetul/Departement/County",
+          "FieldType": "Label",
+          "BoundingBox": {
+            "x": 510,
+            "y": 399,
+            "width": 220,
+            "height": 16
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "FatherFirstName",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 327,
+            "y": 514,
+            "width": 403,
+            "height": 29
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "FatherLastName",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 327,
+            "y": 480,
+            "width": 403,
+            "height": 33
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "FatherFullName",
+          "FieldValue": "{{FatherFirstName}} {{FatherLastName}}",
+          "FieldType": "ComputedField",
+          "DataType": "text",
+          "OnCompute": "computeFullName",
+          "Mappings": {
+          }
+        },
+        {
+          "FieldName": "MotherLastName",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 327,
+            "y": 544,
+            "width": 403,
+            "height": 33
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "MotherFirstName",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 327,
+            "y": 577,
+            "width": 403,
+            "height": 32
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "MotherFullName",
+          "FieldValue": "{{MotherFirstName}} {{MotherLastName}}",
+          "FieldType": "ComputedField",
+          "DataType": "text",
+          "OnCompute": "computeFullName",
+          "Mappings": {
+          }
+        },
+        {
+          "FieldName": "BirthDocumentNumber",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 165,
+            "y": 610,
+            "width": 196,
+            "height": 21
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "CNDate",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 385,
+            "y": 605,
+            "width": 355,
+            "height": 30
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "CNRegisteredPlace",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 154,
+            "y": 632,
+            "width": 289,
+            "height": 36
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "CNRegisteredCounty",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 444,
+            "y": 632,
+            "width": 297,
+            "height": 38
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "Mentions1",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 131,
+            "y": 687,
+            "width": 608,
+            "height": 23
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "Mentions2",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 40,
+            "y": 708,
+            "width": 689,
+            "height": 51
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "Mentions",
+          "FieldValue": "{{Mentions1}} {{Mentions2}}",
+          "FieldType": "ComputedField",
+          "DataType": "text",
+          "OnCompute": "computeFullName",
+          "Mappings": {
+          }
+        },
+        {
+          "FieldName": "CNRegisteredInstitution",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 112,
+            "y": 840,
+            "width": 425,
+            "height": 41
+          },
+          "Mappings": {}
+        },
+        {
+          "FieldName": "CNRegisteredDate",
+          "FieldType": "TextField",
+          "DataType": "text",
+          "BoundingBox": {
+            "x": 569,
+            "y": 840,
+            "width": 169,
+            "height": 41
+          },
+          "Mappings": {}
+        }
+      ]
+    }
+  ]
+}
